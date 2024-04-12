@@ -1,66 +1,32 @@
-## Foundry
+# Foundry NFT
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This project is a collection of smart contracts for creating and interacting with Non-Fungible Tokens (NFTs) on the Ethereum blockchain.
 
-Foundry consists of:
+## Getting Started
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Documentation
+### Prerequisites
 
-https://book.getfoundry.sh/
+- Node.js and npm
+- Solidity compiler (solc)
 
-## Usage
+### Installation
 
-### Build
+1. Clone the repository:
 
-```shell
-$ forge build
+```bash
+git clone https://github.com/username/foundry-nft.git
+cd foundry-nft
 ```
 
-### Test
-
-```shell
-$ forge test
+2. Install libraries
+```bash
+make install
 ```
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+3.Create .env with next variables
+ - SEPOLIA_URL - your provider link with api key for sepolia network (use Alchemy or Infura)
+ - MAINNET_URL - same as previous but for Mainnet
+ - ETHERSCAN_API_KEY - etherscan api key to have posibility automaticly verify deployed contract
+ - PRIVATE_KEY - private key for wallet which YOU USE ONLY FOR TESTING PURPOSES, DO NOT EXPOSE KEYS FROM WALLETS WITH FUNDS
